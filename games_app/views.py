@@ -1,6 +1,7 @@
 import logging
 import random
 from django.http import HttpResponse
+from my_app.models import Coin
 
 logger = logging.getLogger(__name__)
 
@@ -10,6 +11,10 @@ def eagle(request):
     response = random.choice(game_list)
     logger.info(f'Значение: {response}')
     return HttpResponse(response)
+
+
+def show_elements(request, n: int):
+    return HttpResponse(f'{Coin.counter(n)}')
 
 
 def cube(request):

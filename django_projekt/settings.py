@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapp',
+    'my_app',
+    'about_me_app'
 ]
 
 MIDDLEWARE = [
@@ -164,6 +166,11 @@ LOGGING = {
             'propagate': True,
         },
         'about_me_app': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        'my_app': {
             'handlers': ['console', 'file'],
             'level': 'INFO',
             'propagate': True,
