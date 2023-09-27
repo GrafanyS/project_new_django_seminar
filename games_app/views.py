@@ -9,8 +9,10 @@ logger = logging.getLogger(__name__)
 def eagle(request):
     game_list = ['орел', 'решка']
     response = random.choice(game_list)
-    logger.info(f'Значение: {response}')
-    return HttpResponse(response)
+    coin = Coin(is_eagle=response)
+    coin.save()
+    logger.info(f'Значение: {coin}')
+    return HttpResponse(coin)
 
 
 def show_elements(request, n: int):

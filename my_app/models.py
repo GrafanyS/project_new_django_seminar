@@ -1,5 +1,4 @@
 from django.db import models
-# from collections import Counter
 
 
 class Coin(models.Model):
