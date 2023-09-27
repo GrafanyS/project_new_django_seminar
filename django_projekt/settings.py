@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'myapp',
     'my_app',
     'about_me_app',
-    'games_app'
+    'games_app',
+    'internet_shop',
 ]
 
 MIDDLEWARE = [
@@ -172,6 +173,11 @@ LOGGING = {
             'propagate': True,
         },
         'my_app': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        'internet_shop': {
             'handlers': ['console', 'file'],
             'level': 'INFO',
             'propagate': True,

@@ -12,7 +12,7 @@ class Command(BaseCommand):
         count = kwargs.get('count')
         for i in range(1, count + 1):
             client = Client(name=f'name{i}', email=f'email{i}@mail.ru',
-                            phone=i * 1_000_000_000, address=f'address{i}')
+                            phone=i * 1_000_000, address=f'address{i}')
             goods = Goods(name=f'name{i}', description=f'description{i}', price=i * 1_000, amount=i)
             client.save()
             goods.save()
